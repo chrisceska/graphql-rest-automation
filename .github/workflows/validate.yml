@@ -26,10 +26,24 @@ jobs:
       - name: Build and generate sample
         run: npm run validate
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Build C# example
+        run: dotnet build examples/csharp/RestToGraphqlGenerator/RestToGraphqlGenerator.csproj
+
+      - name: Run C# example
+        run: >
+          dotnet run --project examples/csharp/RestToGraphqlGenerator/RestToGraphqlGenerator.csproj --
+          examples/csharp/openapi/users.json
+          examples/csharp/generated
+          https://api.contoso.com
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform format check
         working-directory: infra/terraform
         run: terraform fmt -check
-

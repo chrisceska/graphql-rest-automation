@@ -43,6 +43,19 @@ generated/
     └── Mutation.createUser.xml
 ```
 
+## C# example
+
+A dependency-free .NET console generator is available in `examples/csharp`.
+
+```powershell
+dotnet run --project .\examples\csharp\RestToGraphqlGenerator\RestToGraphqlGenerator.csproj -- `
+  .\examples\csharp\openapi\users.json `
+  .\examples\csharp\generated `
+  https://api.contoso.com
+```
+
+It emits the same APIM-ready `schema.graphql`, `resolvers.json`, and resolver policy XML files as the TypeScript generator.
+
 ## Deploy with Terraform
 
 ```powershell
