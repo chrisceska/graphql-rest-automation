@@ -21,12 +21,12 @@ resource "azurerm_api_management_api" "graphql" {
   resource_group_name = azurerm_resource_group.main.name
   api_management_name = azurerm_api_management.main.name
 
-  api_type      = "graphql"
-  display_name  = "Synthetic GraphQL"
-  path          = var.graphql_api_path
-  protocols     = ["https"]
-  revision      = "1"
-  service_url   = "https://example.invalid"
+  api_type              = "graphql"
+  display_name          = "Synthetic GraphQL"
+  path                  = var.graphql_api_path
+  protocols             = ["https"]
+  revision              = "1"
+  service_url           = "https://example.invalid"
   subscription_required = false
 }
 
@@ -70,4 +70,3 @@ resource "azapi_resource" "resolver" {
 
   depends_on = [azapi_resource.graphql_schema]
 }
-
