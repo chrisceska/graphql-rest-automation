@@ -2,6 +2,8 @@
 
 Automation starter for creating synthetic GraphQL endpoints from REST APIs using Azure API Management (APIM).
 
+![Synthetic GraphQL from REST APIs architecture](docs/architecture.svg)
+
 The workflow is:
 
 1. Read an OpenAPI document.
@@ -76,4 +78,3 @@ az deployment group create `
 - APIM GraphQL resolvers are field-level resources. Each generated resolver maps one GraphQL field to one REST operation.
 - The Terraform sample uses `azapi_resource` for APIM schema and resolver child resources so it can track Azure API surface changes even when the native provider lags.
 - Do not store REST API secrets in generated policies. Use APIM named values backed by Key Vault or managed identity where possible.
-

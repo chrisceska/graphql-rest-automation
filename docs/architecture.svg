@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="680" viewBox="0 0 1680 680" role="img" aria-label="Synthetic GraphQL from REST APIs architecture diagram">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1e1e1e" />
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+<text x="40" y="68" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#000000" text-anchor="start"><tspan x="40" dy="0">Synthetic GraphQL from REST APIs</tspan></text>
+<rect x="40" y="105" width="900" height="80" rx="12" ry="12" stroke="#5C2D91" stroke-width="2" fill="#E8DAEF"/>
+<text x="60" y="136" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#000000" text-anchor="start"><tspan x="60" dy="0">Generator converts OpenAPI operations into GraphQL schema + APIM resolver policies; IaC deploys them as a synthetic GraphQL API.</tspan></text>
+<rect x="50" y="260" width="170" height="110" rx="12" ry="12" stroke="#0078D4" stroke-width="2" fill="#CFE4FA"/>
+<text x="135" y="296" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="135" dy="0">REST APIs</tspan><tspan x="135" dy="20">OpenAPI specs</tspan><tspan x="135" dy="20">users.yaml</tspan></text>
+<rect x="310" y="245" width="220" height="140" rx="12" ry="12" stroke="#F7630C" stroke-width="2" fill="#FFF4CE"/>
+<text x="420" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#000000" text-anchor="middle"><tspan x="420" dy="0">Generator CLI</tspan><tspan x="420" dy="18.75">TypeScript</tspan><tspan x="420" dy="18.75"></tspan><tspan x="420" dy="18.75">Maps operations to</tspan><tspan x="420" dy="18.75">Query / Mutation fields</tspan></text>
+<rect x="620" y="245" width="230" height="140" rx="12" ry="12" stroke="#107C10" stroke-width="2" fill="#DFF6DD"/>
+<text x="735" y="280" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#000000" text-anchor="middle"><tspan x="735" dy="0">Generated artifacts</tspan><tspan x="735" dy="18.75">schema.graphql</tspan><tspan x="735" dy="18.75">resolvers/*.xml</tspan><tspan x="735" dy="18.75">resolvers.json</tspan></text>
+<rect x="620" y="460" width="230" height="120" rx="12" ry="12" stroke="#5C2D91" stroke-width="2" fill="#E8DAEF"/>
+<text x="735" y="496" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="735" dy="0">IaC deployment</tspan><tspan x="735" dy="20">Terraform + azapi</tspan><tspan x="735" dy="20">or Bicep</tspan></text>
+<rect x="970" y="210" width="360" height="430" rx="12" ry="12" stroke="#0078D4" stroke-width="2" fill="none"/>
+<text x="1150" y="245" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#000000" text-anchor="middle"><tspan x="1150" dy="0">Azure API Management</tspan></text>
+<rect x="1010" y="290" width="280" height="80" rx="12" ry="12" stroke="#0078D4" stroke-width="2" fill="#CFE4FA"/>
+<text x="1150" y="324" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="1150" dy="0">Synthetic GraphQL API</tspan><tspan x="1150" dy="20">/graphql</tspan></text>
+<rect x="1010" y="405" width="130" height="80" rx="12" ry="12" stroke="#107C10" stroke-width="2" fill="#DFF6DD"/>
+<text x="1075" y="440" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#000000" text-anchor="middle"><tspan x="1075" dy="0">GraphQL</tspan><tspan x="1075" dy="18.75">schema</tspan></text>
+<rect x="1160" y="405" width="130" height="80" rx="12" ry="12" stroke="#F7630C" stroke-width="2" fill="#FFF4CE"/>
+<text x="1225" y="440" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#000000" text-anchor="middle"><tspan x="1225" dy="0">Field</tspan><tspan x="1225" dy="18.75">resolvers</tspan></text>
+<rect x="1010" y="525" width="280" height="75" rx="12" ry="12" stroke="#1e1e1e" stroke-width="2" fill="#F3F2F1"/>
+<text x="1150" y="554" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle"><tspan x="1150" dy="0">validate-graphql-request</tspan><tspan x="1150" dy="17.5">security + throttling policies</tspan></text>
+<rect x="1430" y="295" width="210" height="130" rx="12" ry="12" stroke="#107C10" stroke-width="2" fill="#DFF6DD"/>
+<text x="1535" y="336" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="1535" dy="0">Existing REST</tspan><tspan x="1535" dy="20">backends</tspan><tspan x="1535" dy="20">/users, /orders...</tspan></text>
+<rect x="1430" y="510" width="210" height="105" rx="12" ry="12" stroke="#0078D4" stroke-width="2" fill="#CFE4FA"/>
+<text x="1535" y="551" font-family="Segoe UI, Arial, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="1535" dy="0">GraphQL clients</tspan><tspan x="1535" dy="20">single endpoint</tspan></text>
+<rect x="310" y="460" width="220" height="120" rx="12" ry="12" stroke="#1e1e1e" stroke-width="2" fill="#F3F2F1"/>
+<text x="420" y="495" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#000000" text-anchor="middle"><tspan x="420" dy="0">GitHub Actions</tspan><tspan x="420" dy="18.75">build generator</tspan><tspan x="420" dy="18.75">review generated diff</tspan></text>
+<path d="M 225 315 L 305 315" stroke="#1e1e1e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+<path d="M 535 315 L 615 315" stroke="#1e1e1e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+<path d="M 735 390 L 735 455" stroke="#1e1e1e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+<path d="M 855 520 L 965 480" stroke="#1e1e1e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+<path d="M 1295 360 L 1425 360" stroke="#1e1e1e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+<path d="M 1430 565 L 1335 565" stroke="#1e1e1e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+<path d="M 420 455 L 420 390" stroke="#1e1e1e" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+</svg>
