@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Query-listUsers",
+    "type": "Query",
+    "field": "listUsers",
+    "policy_file": "../../generated/resolvers/Query.listUsers.xml",
+    "description": "Resolve Query.listUsers from REST GET /users"
+  },
+  {
+    "name": "Mutation-createUser",
+    "type": "Mutation",
+    "field": "createUser",
+    "policy_file": "../../generated/resolvers/Mutation.createUser.xml",
+    "description": "Resolve Mutation.createUser from REST POST /users"
+  },
+  {
+    "name": "Query-getUser",
+    "type": "Query",
+    "field": "getUser",
+    "policy_file": "../../generated/resolvers/Query.getUser.xml",
+    "description": "Resolve Query.getUser from REST GET /users/{id}"
+  }
+]

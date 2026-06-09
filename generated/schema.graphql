@@ -1,0 +1,14 @@
+scalar JSON
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  active: Boolean
+}
+type Query {
+  listUsers(limit: Int, offset: Int): [User!]
+  getUser(id: ID!): User
+}
+type Mutation {
+  createUser(input: JSON!): User
+}

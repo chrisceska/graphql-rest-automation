@@ -1,0 +1,16 @@
+<http-data-source>
+  <http-request>
+    <set-method>POST</set-method>
+    <set-url>@($"https://api.contoso.com/users")</set-url>
+    <set-header name="Accept" exists-action="override">
+      <value>application/json</value>
+    </set-header>
+    <set-header name="Content-Type" exists-action="override">
+      <value>application/json</value>
+    </set-header>
+    <set-body>@(context.GraphQL.Arguments["input"].ToString())</set-body>
+  </http-request>
+  <http-response>
+    <set-body>@(context.Response.Body.As&lt;string&gt;())</set-body>
+  </http-response>
+</http-data-source>

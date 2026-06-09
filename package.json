@@ -1,0 +1,20 @@
+{
+  "name": "graphql-rest-automation",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Generate Azure API Management synthetic GraphQL APIs and resolvers from REST OpenAPI specs.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p generator/tsconfig.json",
+    "generate": "node dist/generate.js",
+    "validate": "npm run build && npm run generate -- ./openapi/users.yaml ./generated https://api.contoso.com"
+  },
+  "dependencies": {
+    "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.32",
+    "typescript": "^5.8.3"
+  }
+}
+
